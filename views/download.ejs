@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=content-width, initial-scale=1.0">
+	<title>Download | Share - File Sharing Mode Easy</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<!-- <img src="/img/logo.png"> -->
+
+	<section class="download">
+		<% if(locals.error){ %>
+		<h4><%= locals.error %> 😎</h4>
+		<% } else { %>
+		<h2>Your file is ready to download</h2>
+		<p>Link expiress in 24 hours</p>
+		<div class="download_meta">
+			<h4><%= fileName %></h4>
+			<small><%= parseInt(fileSize/1000) %> KB</small>
+		</div>
+		<div class="send-btn-container">
+			<a href="<%= downloadLink %>">Download file</a>
+		</div>
+
+		<% } %>
+	</section>
+</body>
+</html>
